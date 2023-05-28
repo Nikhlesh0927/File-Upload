@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q3</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+     input[type=file]
+      {
+          height: 90%;
+          background-color: lightyellow;
+          color: violet;
+      }
+    </style>
+ <script>
+       $(document).ready(function(){
+       $("#p2").hide();
+       $("#para2").hide();
+       $("#bt").click(function(){
+        if (file.files.length != 0) {
+            $("#p2").show();
+            $("#para2").show();
+            $("#p1").hide();
+            $("#para1").hide();
+        }
+     });
+    });
+ </script>
+</head>
+<body>
+   <div class="container">
+    <form>
+        <div class="form-group">
+            <label for="file" class="text-danger"><b> Upload a File</b></label>
+            <input type="file" class="form-control" id="file" class="bg-warning">
+        </div>
+        <button type="button" class="btn btn-info" id="bt">upload</button>
+    </form>
+    <br>
+    <p class="text-warning" id="para1">The File is Uploading</p>
+    <p class="text-success" id="para2">The File Uploaded Successfully</p>
+    <div class="progress">
+        <div class="progress-bar progress-bar-striped progress-bar-animated"style="width: 40%;" id="p1">Uploading</div>
+        <div class="progress-bar bg-success" style="width: 100%;" id="p2">Uploaded</div>
+    </div>
+    <br>
+</div>
+</body>
+</html>
